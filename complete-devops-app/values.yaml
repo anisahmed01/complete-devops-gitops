@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: 521464398227.dkr.ecr.us-east-1.amazonaws.com/complete-devops-automation
-  tag: "52638cdafb73"
+  tag: "1f67d4b55538"
   pullPolicy: IfNotPresent
 
 service:
