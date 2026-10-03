@@ -1,0 +1,17 @@
+replicaCount: 2
+
+image:
+  repository: 521464398227.dkr.ecr.us-east-1.amazonaws.com/complete-devops-automation
+  tag: "52638cdafb73"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 5000
+
+ingress:
+  enabled: true
+  className: alb
+  scheme: internet-facing
+  targetType: ip
