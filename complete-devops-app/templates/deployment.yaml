@@ -22,6 +22,13 @@ spec:
 
           imagePullPolicy: {{ .Values.image.pullPolicy }}
 
+          env:
+          - name: APP_MESSAGE
+            valueFrom:
+              secretKeyRef:
+                name: complete-devops-app-secret
+                key: APP_MESSAGE
+
           ports:
             - containerPort: {{ .Values.service.targetPort }}
 
